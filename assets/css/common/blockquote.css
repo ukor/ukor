@@ -1,0 +1,31 @@
+/* 
+* Inspired by - https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/ */
+
+blockquote {
+  background: transparent;
+  border-left: 10px solid #34bc9d;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+  color: #34bc9d;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+/* blockquote:after { */
+/*   color: #ccc; */
+/*   content: close-quote; */
+/*   font-size: 4em; */
+/*   line-height: 0.1em; */
+/*   margin-left: 0.25em; */
+/*   vertical-align: -0.4em; */
+/* } */
+
+blockquote p {
+  display: inline;
+}
