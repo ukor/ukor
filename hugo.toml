@@ -1,6 +1,6 @@
 baseURL = 'https://ukor.com.ng/'
 languageCode = 'en-us'
-title = 'j.ukor'
+title = 'Jidechi ukor'
 theme = 'PaperMod'
 
 
@@ -30,8 +30,9 @@ weight = 1
 	mode="auto" # color-mode → light,dark,toggle or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
   title = 'Jidechi ukor'
+  author = "Jidechi ukor"
 	subtitle = "A collection of my thoughts and articles."
-  description = "To all"
+  description = "A collection of my thoughts and articles. The goal is to be big enough to make an impact, yet small enough to not be seen."
 	mathjax = true # enable MathJax support
 	katex = true # enable KaTeX support
 
