@@ -64,7 +64,8 @@ weight = 1
 
 [params.profileMode]
   enabled = true
-  imageUrl = "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+  # imageUrl = "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+  imageUrl = "https://raw.githubusercontent.com/ukor/ukor/refs/heads/main/assets/images/passport_photograph.png"
   imageTitle = "Image of j.ukor"
   title = "Hi there"
   subtitle = """
