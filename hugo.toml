@@ -1,3 +1,66 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://ukor.com.ng/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'j.ukor'
+theme = 'PaperMod'
+
+defaultTheme = 'auto'
+showReadingTime = true
+showWordCount = true
+
+
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+summaryLength = 70
+
+
+[params]
+	mode="auto" # color-mode → light,dark,toggle or auto
+	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
+  description = "To all"
+	mathjax = true # enable MathJax support
+	katex = true # enable KaTeX support
+
+# Social Tags
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/ukor"
+
+# Main menu Items
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+# [[menu.main]]
+# name = "Post"
+# url = "/posts"
+# weight = 2
+
+[[menu.main]]
+name = "Articles"
+url = "/articles"
+weight = 2
+
+[[menu.main]]
+name = "Thoughts"
+url = "/digital-garden"
+weight = 2
+
+
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 4
