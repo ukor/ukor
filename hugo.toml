@@ -3,36 +3,93 @@ languageCode = 'en-us'
 title = 'j.ukor'
 theme = 'PaperMod'
 
-defaultTheme = 'auto'
-showReadingTime = true
-showWordCount = true
-
 
 # Code Highlight
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
+pygmentsUseClasses = true
 
-summaryLength = 70
+summaryLength = 20
 
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+mainsections = [ "articles", "digital-garden" ]
+
+[minify]
+disableXML = true
+
+[languages.en]
+languageName = "English"
+weight = 1
 
 [params]
 	mode="auto" # color-mode → light,dark,toggle or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = "Minimal and Clean [blog theme for Hugo](https://github.com/athul/archie)"
+  title = 'Jidechi ukor'
+	subtitle = "A collection of my thoughts and articles."
   description = "To all"
 	mathjax = true # enable MathJax support
 	katex = true # enable KaTeX support
 
-# Social Tags
+  defaultTheme = 'dark'
+  disableThemeToggle = true
+  showReadingTime = true
+  showWordCount = true
 
+  ShowShareButtons = true
+  displayFullLangName = true
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = true
+  ShowPageNums = true
+  ShowToc = true
+
+
+[params.homeInfoParams]
+  Title = "Home Info params"
+  Content = """
+
+  """
+
+[[params.socialIcons]]
+  name = "github"
+  title = "View Source on Github"
+  url = "https://github.com/ukor"
+
+[params.profileMode]
+  enabled = true
+  imageUrl = "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+  imageTitle = "Image of j.ukor"
+  title = "Hi there"
+  subtitle = """
+  > Big enough to make an impact; Small enough not to be seen
+  """
+
+[[params.profileMode.buttons]]
+name = "Articles"
+url = "articles"
+
+[[params.profileMode.buttons]]
+name = "Digital Garden"
+# url = "https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode"
+url = "digital-gardens"
+
+# Social Tags
 [[params.social]]
 name = "GitHub"
 icon = "github"
 url = "https://github.com/ukor"
 
-# Main menu Items
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
 
+# Main menu Items
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -60,7 +117,13 @@ name = "About"
 url = "/about"
 weight = 3
 
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 4
+# [[menu.main]]
+# name = "Tags"
+# url = "/tags"
+# weight = 4
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true
