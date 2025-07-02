@@ -18,26 +18,27 @@ buildFuture = false
 buildExpired = false
 enableEmoji = true
 mainsections = [ "articles", "digital-garden" ]
+math = true
 
 [minify]
-disableXML = true
+  disableXML = true
 
 [languages.en]
-languageName = "English"
-weight = 1
+  languageName = "English"
+  weight = 1
 
 [params]
-	mode="auto" # color-mode → light,dark,toggle or auto
-	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+  mode="auto" # color-mode → light,dark,toggle or auto
+  useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
   title = 'Jidechi ukor'
   author = "Jidechi ukor"
-	subtitle = "A collection of my thoughts and articles."
-  description = "A collection of my thoughts and articles. The goal is to be big enough to make an impact, yet small enough to not be seen."
-	mathjax = true # enable MathJax support
-	katex = true # enable KaTeX support
+  subtitle = "A collection of my thoughts and articles."
+  description = "A collection of my thoughts and articles. The goal is to be small enough to not be seen yet Big enough to make an impact."
+  mathjax = true # enable MathJax support
+  katex = true # enable KaTeX support
 
   defaultTheme = 'dark'
-  disableThemeToggle = true
+  disableThemeToggle = false
   showReadingTime = true
   showWordCount = true
 
@@ -65,37 +66,34 @@ weight = 1
 
 [params.profileMode]
   enabled = true
-  # imageUrl = "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
   imageUrl = "https://raw.githubusercontent.com/ukor/ukor/refs/heads/main/assets/images/passport_photograph.png"
   imageTitle = "Image of j.ukor"
   title = "Hi there"
   subtitle = """
-  > Big enough to make an impact, yet small enough not to be seen
-  """
+  > Small enough not to be seen, yet BIG enough to make an impact."""
 
 [[params.profileMode.buttons]]
-name = "Articles"
-url = "articles"
+  name = "Articles"
+  url = "articles"
 
 [[params.profileMode.buttons]]
-name = "Digital Garden"
-# url = "https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode"
-url = "digital-gardens"
+  name = "Digital Garden"
+  url = "digital-garden"
 
 # Social Tags
 [[params.social]]
-name = "GitHub"
-icon = "github"
-url = "https://github.com/ukor"
+  name = "GitHub"
+  icon = "github"
+  url = "https://github.com/ukor"
 
 [outputs]
-home = [ "HTML", "RSS", "JSON" ]
+  home = [ "HTML", "RSS", "JSON" ]
 
 # Main menu Items
 [[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+  name = "Home"
+  url = "/"
+  weight = 1
 
 # [[menu.main]]
 # name = "Post"
@@ -103,21 +101,21 @@ weight = 1
 # weight = 2
 
 [[menu.main]]
-name = "Articles"
-url = "/articles"
-weight = 2
+  name = "Articles"
+  url = "/articles"
+  weight = 2
 
 [[menu.main]]
-name = "Thoughts"
-url = "/digital-garden"
-weight = 2
+  name = "Thoughts"
+  url = "/digital-garden"
+  weight = 2
 
 
 
 [[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
+  name = "About"
+  url = "/about"
+  weight = 3
 
 # [[menu.main]]
 # name = "Tags"
@@ -125,7 +123,7 @@ weight = 3
 # weight = 4
 
 [services.instagram]
-disableInlineCSS = true
+  disableInlineCSS = true
 
 [services.twitter]
-disableInlineCSS = true
+  disableInlineCSS = true

@@ -1,2 +1,2 @@
 > [!IMPORTANT]
-> Big enough to make an impact, yet small enough not to be seen
+> Small enough not to be seen, yet BIG enough to make an impact
