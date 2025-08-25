@@ -5,7 +5,6 @@ title = 'Love Hate and Mathematics'
 
 description = 'Love, Hate, Mathematics'
 tags = ['articles', 'digital garden', 'mathematics']
-featured_image = ""
 +++
 
 

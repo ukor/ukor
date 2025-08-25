@@ -4,6 +4,4 @@ draft = true
 title = 'Fate of an Unfortunate Bug Ep3'
 description = "Double Credit"
 tags = ['Articles', 'Handling Bug']
-featured_image = ""
-
 +++
