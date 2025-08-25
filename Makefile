@@ -24,7 +24,7 @@ create_article:
 
 create_garden:
 	@echo "-----------"
-	@echo "Creating $(FILE) in content/digital-garden/$(FILE)"
+	@echo "Creating content/digital-garden/$(FILE)"
 	@echo "-----------"
 	hugo mod graph
 	hugo new content digital-garden/"$(FILE)"
