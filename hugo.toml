@@ -36,6 +36,7 @@ math = true
   description = "A collection of my thoughts and articles. The goal is to be small enough to not be seen yet Big enough to make an impact."
   mathjax = true # enable MathJax support
   katex = true # enable KaTeX support
+  math = true
 
   defaultTheme = 'dark'
   disableThemeToggle = false
@@ -127,3 +128,12 @@ math = true
 
 [services.x]
   disableInlineCSS = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]

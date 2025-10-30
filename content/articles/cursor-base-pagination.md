@@ -102,8 +102,8 @@ $$
 id < 3
 $$
 
-> ![NOTE]
 > ~~`before` should not be set in the first request because this is the first request, and no item is factually older than the first 3.~~   
+> \
 > `before` should be set for a consistent cursor.   
    
 The value for `after` is set to the last item on the list - in this case, 3 (translate to - I want item earlier than 3); id is greater than 3.    
