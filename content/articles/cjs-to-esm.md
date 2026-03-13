@@ -59,13 +59,13 @@ Adding the type field with a value of `module`  tells NodeJs to treat this proje
 ### Importing with file extension   
 ESM requires that you import JavaScript files with their extension.   
 I can no longer do this   
-```
+```Typescript
 import { hello } from '../world';
 
 
 ```
 rather, I have to do this   
-```
+```Typescript
 import { hello } from '../world.js';
 ```
 Doing this for a few files is fine, but for a 4-year project with multiple files and some dead code. Pain! - Pain and boredom are all I see.   
@@ -76,25 +76,25 @@ I thought about writing a script in Python that scans through our codebase and p
 This was going to take some time to plan and implement, and would be overkill for a small code base like that of `project\_small`.    
 ### Importing Built-in libraries   
 Importing built-in libraries also needs changes, for example, I changed this   
-```
+```Typescript
 import path from 'path';
 
 ```
 to this   
-```
+```Typescript
 import path from 'node:path';
 
 ```
 This was just to avoid name collision; amd for security purpose. The Official NodeJS module documentation highlight this.   
 ### Global Constants   
-Another pain point was that in ESM  the "\_\_dirname"*  ** ***and*** "\_\_*filename" **globals does not exist   
+Another pain point was that in ESM  the "__dirname" and "__filename" globals does not exist   
 I had to learn about    
-```
+```Typescript
 "import.meta.url"
 ```
    
 At the end I abstracted the code below to a utils file   
-```
+```Typescript
 import { fileURLToPath } from 'node:url';
 import { dirname } from 'node:path';
 
@@ -107,8 +107,10 @@ The next pain point was with third party library what ends with `.js`, a good ex
 The final pain point was testing; we used Jest for testing. I remember when we first added Jest to the codebase; it was a painful process. Migrating to ESM reminded me how painful that process was. Determined not to go through it again, we switched to Vitest. Secondly, our Jest configuration did not work out of the box with ESM, as it was finding it hard to resolve the `.js`  import   
 One thing that took me a while to wrap my head around is that our tests are written in Typescript, but when we import files from the source( `src`  ) directory, we have to prefix each file with `.js`    
 It felt awkward importing a JavaScript file in a TypeScript file, and also, the file I was importing is in TypeScript. I read somewhere that Vitest is smart enough to resolve this, but how? Magic!    
-Vitest creates a **module graph**. When it encounters `import ... from './file.js'`, your alias interceptor kicks in, changes the request to `./file.ts`, and then the `vite` pipeline uses `esbuild` to compile that TS file on-the-fly into memory.   
-VItest did not need any configuration to setup, but after going through the documentation we added a few configuration for a project setup on the root folder and also added another configuration in the root of `project\_small`    
+
+> Vitest creates a **module graph**. When it encounters `import ... from './file.js'`, the alias interceptor kicks in, changes the request to `./file.ts`, and then the `vite` pipeline uses `esbuild` to compile that TS file on-the-fly into memory.   
+
+Vitest did not need any configuration to setup, but after going through the documentation we added a few configuration for a project setup on the root folder and also added another configuration in the root of `project\_small`    
 The root configuration, point Vitest to the each services by referencing the vitest configuration in each service.    
 ```
 import { defineConfig } from 'vitest/config'
@@ -122,7 +124,7 @@ export default defineConfig({
 })
 ```
 For each service in the `apps` directory I added a more detailed configuration. Everything works as expected except for the file that uses the currency.js library. This was another pain point, after a couple of reading and chat with Google Gemini, this configuration resolved it for me   
-```
+```Typescript
 import { defineConfig } from 'vitest/config';
 import path from 'node:path';
 import { createRequire } from 'node:module';
@@ -180,7 +182,7 @@ export default defineConfig({
 ### ESM and PM2 Configuration   
 Migrating to ESM also change our PM@ configuration. The changes were in the `cwd`  field and `node\_args`    
    
-```
+```Typescript
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -226,7 +228,7 @@ export default {
    
  --- 
 ## Automating prefixing .js extension   
-I found out about `jscodeshift`, a toolkit from Meta that automates syntax transformation. I have yet to use it, but I will provide more details if I do.   
+I found out about `jscodeshift`, a toolkit from Meta that automates syntax transformation. I am yet to use it, but I will provide more details when I do.   
    
  --- 
 ## Reference   
