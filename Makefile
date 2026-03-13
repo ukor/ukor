@@ -31,3 +31,6 @@ create_garden:
 
 graph:
 	hugo mod graph
+
+serve:
+	hugo server
