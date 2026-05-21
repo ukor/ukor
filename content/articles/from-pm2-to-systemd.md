@@ -23,7 +23,7 @@ Description: "Highlights reasons and steps taken to migrate a NodeJs project fro
 id: bafyreietd5zgqa6jggvfhafadynfjntznya3zwxupqsjwa3zscn27loasm
 ---
 
-Every developer who has worked with the NodeJS environment will probably have heard of PM2 after building a NodeJS project. The big question arises, "How do I deploy this project to production?"    
+Every developer who has worked with the NodeJS environment will probably have heard of PM2. After building a NodeJS project, the big question arises, "How do I deploy this project to production?".    
    
 If you are using a managed cloud provider, the answer is fairly simple, but if you are one of us building in a constrained environment or just someone who likes to host their own project, you will definitely hear about PM2. 
 
@@ -205,22 +205,23 @@ Yes, Docker will save us this headache. Using Docker will remove the need for  P
    
 Docker introduce another layer of complexity that I and the team are not ready for yet. Another learning curve, security and best practice.    
    
-Most importantly, we have a strict budget for server cost and memory usage. You may sugest Podman as a is lightwight alternative to Docker and it also have less memory footprint. Containerisation is an hard No for us as it increases the surface area we need to cover when it comes to system security.   
+Most importantly, we have a strict budget for server cost and memory usage. You may sugest Podman as a lightweight alternative to Docker and it also have less memory footprint. Containerisation is an hard No for us as it increases the surface area we need to cover when it comes to system security.   
    
 Sticking with systemd allow us to just focus on managing secrets and privilege escalation. Docker comes with a lot of checklist that we don't have the budget for.   
    
 ## Trade-offs and Future Improvement   
 Although systemd solves most of our concerns, it also introduces a few pain points that should be addressed in the near future.   
 ### The Scaling Maintenace Burden   
-Right now our deployment script evaluates the server VPU's core and automaticaly maps application instances.    
-When we vertically scale a server by adding more cores, there is going to be a manual bottle neck: an engineer has to remember to update Nginx configuration file to include the new upstream ports.   
+Right now our deployment script evaluates the server CPU's core and automatically maps application instances.    
+When we vertically scale a server by adding more cores, there is going to be a manual bottle neck; an engineer has to remember to update Nginx configuration file to include the new upstream ports.   
+
 To resolve this manual step in the future, I plan to move towards a software like Traefik that allows dynamic configuration changes.   
    
 ### Monitoring, Dashboards, and Alert   
-One of the benefits of using PM2 is that you can get the status, memory usage and number of restarts of all processes managed with PM2 using one command.    
-PM2 also offer a web dashboard that can be accessed the browser. The dashboard is not on by default, it has to be configured. This does not exist with systemd.    
+One of the benefits of using PM2 is that you can get the status, memory usage and number of restarts of all processes managed by PM2 using one command.    
+PM2 also offer a web dashboard that can be accessed through the browser. The dashboard is not on by default, it has to be configured. This does not exist with systemd.    
 To resolve this, I intend to    
-- Use systemd timers to run a script that periodically run a status check script across all  the application instances   
+- Use systemd timers to run a script that periodically run a status check across all the application instances   
 - Parse the output of `systemctl status` , then pipe directly into a JSON file that will be served by Nginx   
 - Use Slack or Telegram webhooks for alerting if any instance switch to failed state   
    
