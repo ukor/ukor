@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="list-page home-container">
+  <header class="list-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+    <div class="list-description">
+      {{ . }}
+    </div>
+    {{ end }}
+  </header>
+
+  <div class="essay-grid list-grid">
+    {{ range .Pages }}
+    <article class="essay-card">
+      <p class="essay-card__date">{{ .Date.Format "Jan 2, 2006" }}</p>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <span class="essay-card__excerpt">{{ .Summary | truncate 150 }}</span>
+    </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

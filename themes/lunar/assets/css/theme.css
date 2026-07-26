@@ -1,0 +1,79 @@
+/* 
+* Theme generated 
+* https://paletton.com/#uid=1040u0kjYbGcMkfesdyog8FtB5i 
+*
+* and visulized with 
+* https://www.realtimecolors.com/?colors=803933-eccfcb-2b0703-a16963-6d413c&fonts=Google%20Sans%20Code-Google%20Sans%20Code
+*
+* */
+
+:root,
+:root[data-theme="light"] {
+  --text: rgb(128, 57, 51);
+  --background: rgb(236, 207, 203);
+  --primary: rgb(43, 7, 3);
+  --secondary: rgb(161, 105, 99);
+  --accent: rgb(109, 65, 60);
+}
+
+:root[data-theme="dark"] {
+  --text: rgb(204, 134, 127);
+  --background: rgb(52, 23, 19);
+  --primary: rgb(252, 216, 212);
+  --secondary: rgb(156, 100, 94);
+  --accent: rgb(195, 151, 146);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Google%20Sans%20Code:700|Google%20Sans%20Code:400');
+
+body {
+  font-family: 'Google Sans Code', monospace;
+  font-weight: 400;
+  margin: 0;
+  background-color: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Google Sans Code', monospace;
+  font-weight: 700;
+  color: var(--text);
+}
+
+html {
+  font-size: 100%;
+}
+
+/* 16px */
+h1 {
+  font-size: 4.210rem;
+  /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem;
+  /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem;
+  /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem;
+  /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem;
+  /* 21.28px */
+}
+
+small {
+  font-size: 0.750rem;
+  /* 12px */
+}

@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="single-post home-container">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <div class="post-meta">
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span class="meta-separator">&middot;</span>
+      <span>{{ .ReadingTime }} min read</span>
+      {{ if .Params.categories }}
+      <span class="meta-separator">&middot;</span>
+      <span>
+        {{ range $index, $cat := .Params.categories }}
+          {{ if gt $index 0 }}, {{ end }}
+          <a href="{{ "/categories/" | relLangURL }}{{ $cat | urlize }}">{{ $cat }}</a>
+        {{ end }}
+      </span>
+      {{ end }}
+    </div>
+  </header>
+  
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
