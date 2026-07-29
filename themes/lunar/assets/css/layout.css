@@ -429,8 +429,6 @@ home-hero__title big {
   overflow-x: auto;
   margin: 2rem 0;
   font-size: 0.9rem;
-  background: var(--primary) !important;
-  /* Override inline chroma styles slightly */
 }
 
 .post-content code {
@@ -624,4 +622,25 @@ home-hero__title big {
 .toc a:hover {
   color: var(--accent);
   text-decoration: underline;
+}
+
+.chroma .hl {
+    display: flex;
+}
+
+.chroma .lnt {
+    padding: 0 0 0 12px;
+}
+
+.highlight pre.chroma code {
+    padding: 8px 0;
+}
+
+.highlight pre.chroma .line .cl,
+.chroma .ln {
+    padding: 0 10px;
+}
+
+.chroma .lntd:last-of-type {
+    width: 100%;
 }
