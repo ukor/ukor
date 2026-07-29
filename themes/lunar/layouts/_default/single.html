@@ -1,11 +1,23 @@
 {{ define "main" }}
 <article class="single-post home-container">
   <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
     <h1 class="post-title">{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
     <div class="post-meta">
-      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      <span title='{{ .Date.Format "2006-01-02 15:04:05 -0700" }}'>{{ .Date.Format "Jan 2, 2006" }}</span>
       <span class="meta-separator">&middot;</span>
       <span>{{ .ReadingTime }} min read</span>
+      <span class="meta-separator">&middot;</span>
+      <span>{{ .WordCount }} words</span>
+      {{- if site.Params.author }}
+      <span class="meta-separator">&middot;</span>
+      <span>{{ site.Params.author }}</span>
+      {{- end }}
       {{ if .Params.categories }}
       <span class="meta-separator">&middot;</span>
       <span>
@@ -18,6 +30,8 @@
     </div>
   </header>
   
+  {{ partial "toc.html" . }}
+
   <div class="post-content">
     {{ .Content }}
   </div>
