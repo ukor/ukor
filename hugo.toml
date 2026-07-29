@@ -1,7 +1,7 @@
 baseURL = 'https://ukor.com.ng/'
 languageCode = 'en-us'
 title = 'Jidechi ukor'
-theme = 'PaperMod'
+theme = 'lunar'
 
 
 # Code Highlight
