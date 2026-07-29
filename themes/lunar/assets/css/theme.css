@@ -54,31 +54,19 @@ html {
   font-size: 100%;
 }
 
-/* 16px */
-h1 {
-  font-size: 4.210rem;
-  /* 67.36px */
-}
+/** 
+* Use browser default for all heading sizes 
+* https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements
+*/
+h1 {}
 
-h2 {
-  font-size: 3.158rem;
-  /* 50.56px */
-}
+h2 {}
 
-h3 {
-  font-size: 2.369rem;
-  /* 37.92px */
-}
+h3 {}
 
-h4 {
-  font-size: 1.777rem;
-  /* 28.48px */
-}
+h4 {}
 
-h5 {
-  font-size: 1.333rem;
-  /* 21.28px */
-}
+h5 {}
 
 small {
   font-size: 0.750rem;
