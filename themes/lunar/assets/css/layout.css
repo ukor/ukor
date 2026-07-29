@@ -433,7 +433,8 @@ home-hero__title big {
 
 .post-content code {
   font-family: 'Google Sans Code', monospace;
-  background: var(--primary);
+  background: var(--code-background);
+  color: var(--code-text);
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-size: 0.9em;
@@ -441,6 +442,7 @@ home-hero__title big {
 
 .post-content pre code {
   background: transparent;
+  color: inherit;
   padding: 0;
 }
 
@@ -625,22 +627,22 @@ home-hero__title big {
 }
 
 .chroma .hl {
-    display: flex;
+  display: flex;
 }
 
 .chroma .lnt {
-    padding: 0 0 0 12px;
+  padding: 0 0 0 12px;
 }
 
 .highlight pre.chroma code {
-    padding: 8px 0;
+  padding: 8px 0;
 }
 
 .highlight pre.chroma .line .cl,
 .chroma .ln {
-    padding: 0 10px;
+  padding: 0 10px;
 }
 
 .chroma .lntd:last-of-type {
-    width: 100%;
+  width: 100%;
 }
