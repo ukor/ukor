@@ -651,6 +651,7 @@ home-hero__title big {
 footer {
   width: 100%;
   display: block;
+  text-align: center;
 }
 
 .site-footer {
