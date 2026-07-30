@@ -648,26 +648,34 @@ home-hero__title big {
 }
 
 /* Footer Styling */
+footer {
+  width: 100%;
+  display: block;
+}
+
 .site-footer {
   text-align: center;
+  width: 100%;
   padding: 2rem 0;
   margin-top: 4rem;
   border-top: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
 .site-footer p {
+  text-align: center;
   margin: 0.5rem 0;
-  color: var(--secondary);
-  font-size: 0.9rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  opacity: 0.9;
 }
 
 .site-footer a {
-  color: var(--text);
-  text-decoration: none;
-  transition: color 0.2s;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity 0.2s;
 }
 
 .site-footer a:hover {
-  color: var(--accent);
-  text-decoration: underline;
+  opacity: 0.7;
 }
