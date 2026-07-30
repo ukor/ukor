@@ -1,7 +1,7 @@
 baseURL = 'https://ukor.com.ng/'
 languageCode = 'en-us'
 title = 'Jidechi ukor'
-theme = 'lunar'
+theme = 'choco'
 
 
 # Code Highlight
@@ -96,10 +96,6 @@ math = true
   url = "/"
   weight = 1
 
-# [[menu.main]]
-# name = "Post"
-# url = "/posts"
-# weight = 2
 
 [[menu.main]]
   name = "Articles"
@@ -118,10 +114,6 @@ math = true
   url = "/about"
   weight = 3
 
-# [[menu.main]]
-# name = "Tags"
-# url = "/tags"
-# weight = 4
 
 [services.instagram]
   disableInlineCSS = true
