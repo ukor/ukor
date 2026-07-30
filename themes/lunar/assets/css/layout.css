@@ -423,12 +423,17 @@ home-hero__title big {
   margin: 2rem 0;
 }
 
+.highlight {
+  position: relative;
+  margin: 2rem 0;
+}
+
 .post-content pre {
   padding: 1.5rem;
   border-radius: 8px;
   overflow-x: auto;
-  margin: 2rem 0;
   font-size: 0.9rem;
+  margin: 0;
 }
 
 .post-content code {
@@ -635,7 +640,31 @@ home-hero__title big {
 }
 
 .highlight pre.chroma code {
+  font-size: 0.9em;
   padding: 8px 0;
+}
+
+.copy-code-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  background-color: var(--secondary);
+  color: var(--background);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.highlight:hover .copy-code-btn {
+  opacity: 1;
+}
+
+.copy-code-btn:hover {
+  background-color: var(--accent);
 }
 
 .highlight pre.chroma .line .cl,
