@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+{{/* Basic SEO */}}
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ site.Params.description }}{{ end }}{{ end }}">
+<meta name="author" content="{{ site.Params.author | default site.Title }}">
+{{ if .Keywords }}<meta name="keywords" content="{{ delimit .Keywords "," }}">{{ end }}
+
+{{/* Open Graph */}}
+{{ template "_internal/opengraph.html" . }}
+
+{{/* Twitter Cards */}}
+{{ template "_internal/twitter_cards.html" . }}
+
+{{/* Schema.org */}}
+{{ template "_internal/schema.html" . }}
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+<script>
+  (() => {
+    try {
+      const stored = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = stored === "dark" || stored === "light" ? stored : (prefersDark ? "dark" : "light");
+    } catch {
+      document.documentElement.dataset.theme = "dark";
+    }
+  })();
+</script>
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+{{ partial "head/math.html" . }}

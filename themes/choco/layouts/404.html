@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="not-found-container" style="text-align: center; padding: 10vh 20px;">
+  <h1 style="font-size: 6rem; margin-bottom: 10px; color: var(--accent);">404</h1>
+  <h2 style="margin-bottom: 20px;">Page Not Found</h2>
+  <p style="color: var(--secondary); margin-bottom: 40px; font-size: 1.1rem;">
+    Oops! The page you are looking for doesn't exist or has been moved.
+  </p>
+  <a href="{{ site.Home.RelPermalink }}" style="
+    display: inline-block;
+    padding: 10px 24px;
+    background: var(--accent);
+    color: var(--background);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+  " onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+    Return to Home
+  </a>
+</div>
+{{ end }}

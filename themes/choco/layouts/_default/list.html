@@ -1,0 +1,39 @@
+{{ define "main" }}
+<div class="list-page home-container">
+  <header class="list-header">
+    <h1 class="list-title">{{ .Title }}</h1>
+    <a href="{{ .RelPermalink }}index.xml" type="application/rss+xml" aria-label="RSS Feed" class="rss-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 11a9 9 0 0 1 9 9"></path>
+        <path d="M4 4a16 16 0 0 1 16 16"></path>
+        <circle cx="5" cy="19" r="1"></circle>
+      </svg>
+    </a>
+  </header>
+  {{ with .Content }}
+  <div class="list-description">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  <div class="list-content-centered">
+    {{ range .Pages.GroupByDate "2006" }}
+    <section class="list-year-group">
+      <h2 class="list-year">{{ .Key }}</h2>
+      <div class="essay-list">
+        {{ range .Pages }}
+        <article class="essay-list-item">
+          <time class="essay-list-item__date" datetime="{{ .Date.Format " 2006-01-02" }}">
+            {{ .Date.Format "Jan 02" }}
+          </time>
+          <h3 class="essay-list-item__title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
