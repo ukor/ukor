@@ -646,3 +646,28 @@ home-hero__title big {
 .chroma .lntd:last-of-type {
   width: 100%;
 }
+
+/* Footer Styling */
+.site-footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+.site-footer p {
+  margin: 0.5rem 0;
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
