@@ -1,2 +1,2 @@
 > [!IMPORTANT]
-> Small enough not to be seen, yet BIG enough to make an impact
+> Writing the unseen code that drives massive systems.
