@@ -69,7 +69,7 @@ It is very easy for one to fall into the illusion that they are not capable of e
    
 I strongly believe that for one to be considered a true believer ( or a "Good person"), one must be fully aware of their ability to cause harm.   
    
-Me I am dishonest; It is the honest ones you should always look at for, because you don't know when they will do something stupid - Captain Jack Sparrow   
+> Me I am dishonest; It is the honest ones you should always look at for, because you don't know when they will do something stupid - Captain Jack Sparrow   
    
 ## The Dominant Strategy   
 This is the strategy that gives the best possible outcome, no matter what the other side or party decide to do.   
@@ -85,5 +85,6 @@ Cooperative and non-zero-sum games still remain a good strategy; It is a very sl
 Many will argue that Tit-for-tat is the best strategy; I see why, but make sure you don't die after the first "Tat" - That was a cheap attempt at humour.   
    
 Tit-for-tat guarantees ruthlessness but can cascade into an endless retaliation which can possibly lead to mutual destruction; it does not sound like a good outcome to me.   
-Although game theory gives room for forgiveness, I still believe that this buttresses my point about collaboration, only this time with some consequences for bad behaviour.\*\*   
+
+Although game theory gives room for forgiveness, I still believe that this buttresses my point about collaboration, only this time with some consequences for bad behaviour.   
 
