@@ -1,9 +1,9 @@
 +++
 date = '2025-07-02T11:56:25+01:00'
 draft = false
-title = 'Love Hate and Mathematics'
+title = 'Love, Hate and Mathematics'
 
-description = 'Love, Hate, Mathematics'
+description = 'The fascinating effect of infinity on my love and hate for Mathematics'
 tags = ['articles', 'digital garden', 'mathematics']
 +++
 
@@ -20,13 +20,15 @@ In case you are yet to figure out the concept I am speaking of, hopefully by the
 
 Infinity is just as real as a unicorn or a dragon
 
-Infinity is the largest number and also not the largest number; infinity is not a number; it is a direction. It is a destination you will never reach, but still exists between any two numbers, i.e 0 and 1.
+Infinity is the largest number and also not the largest number.
+
+Infinity is not a number; it is a direction. It is a destination you will never reach, but still exists between any two numbers, i.e 0 and 1.
 
 Infinity is a concept that you and I will never know about.
 
 Using an infinite amount of changes, we can find the area of any object
 
-$1/\infty$ can be used to find the slope of a curve line 
+$1/\infty$ can be used to find the slope of a curve 
 
 A concept that does not exist is where we find existence - What a magical concept.
 
@@ -45,7 +47,7 @@ Asking to learn and love calculus is asking me to question everything I have kno
 
 I like to think that infinity is perfection, and just as it is impossible for us to reach infinity, so it is to reach *`perfection`*, but we can always try to get just a little closer.
 
-$$ 1 /\infty = impossible = perfection $$
+$$ 1 /\infty = impossible \sim perfection $$
 
 To infinity and beyond.
 
