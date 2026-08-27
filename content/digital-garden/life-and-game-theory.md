@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=schemas/page.schema.json
 title: "Life and Game Theory"
-description: "I talk about one can get the best out of life by borrowing principles from game theory"
+description: "I talk about how one can get the best out of life by borrowing principles from game theory"
 draft: false
 date: "2026-08-26T22:18:36+01:00"
 featured_image: ""
@@ -20,7 +20,7 @@ Tag:
 Creation date: "2025-10-27T18:59:18Z"
 Created by:
     - ukor
-Description: "I talk about one can get the best out of life by borrowing principles from game theory"
+Description: "I talk about how one can get the best out of life by borrowing principles from game theory"
 id: bafyreicv5bytsts5jof44rio2olmwvxumenka7bh7sfu4wxlwz6uuodyb4
 ---
 
